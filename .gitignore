@@ -1,0 +1,12 @@
+# Your saved copy of the original template, kept locally as a design reference.
+# It is excluded from the site because it contains hard-coded
+# file:///D:/website/fashion/... paths and points at demo images that do not
+# exist, so publishing it would put a broken page on the live site at a URL
+# with spaces in it. The file stays on your disk, untouched.
+MILANO - Confidence is the best outfit.html
+MILANO - Confidence is the best outfit_files/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Republic — Confidence is the best outfit</title>
+    <meta name="description" content="Shop Republic — striped polos, Cuban shirts, linen shirts and crop tees for men and ladies. Browse the collection and order on WhatsApp.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shop Republic">
+    <meta property="og:title" content="Shop Republic — Confidence is the best outfit">
+    <meta property="og:description" content="Striped polos, Cuban shirts, linen shirts and crop tees for men and ladies. Order on WhatsApp.">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#shop">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <a href="products.html?category=men">Men</a>
+            <a href="products.html?category=ladies">Ladies</a>
+            <a href="#about">About Us</a>
+        </div>
+        <a href="index.html" class="logo">
+            <img src="img/logo/logo-light.png" alt="Shop Republic" width="640" height="478">
+        </a>
+        <div class="nav-right">
+            <a href="products.html" class="cart-btn">Shop all</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section — banner slider behind the headline -->
+    <section class="hero">
+        <div class="hero-slider" id="banner-slider"></div>
+        <div class="hero-content">
+            <h1>Confidence is the best outfit.<br>Wear it daily.</h1>
+            <p>When you look good, you feel good.</p>
+            <a href="#shop" class="cta-btn">Shop this look</a>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            Shop Republic &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Menswear &amp; Ladieswear &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Order on WhatsApp &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Shop Republic &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Menswear &amp; Ladieswear &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; Order on WhatsApp &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <!-- Men -->
+    <section class="section" id="shop">
+        <div class="section-header">
+            <h2>Men</h2>
+            <a href="products.html?category=men">Explore the shop</a>
+        </div>
+        <div class="product-grid" data-products="men" data-limit="6"></div>
+    </section>
+
+    <!-- Split Section -->
+    <div class="split-section">
+        <div class="split-image">
+            <img src="img/category-ladies.jpg" alt="Red Brasil Rio de Janeiro crop tee from the Shop Republic ladies collection." loading="lazy" decoding="async" width="900" height="1125">
+        </div>
+        <div class="split-content">
+            <h2>Shop<br>Ladies</h2>
+            <a href="products.html?category=ladies" class="cta-btn">Shop ladies</a>
+        </div>
+    </div>
+
+    <!-- Ladies -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Ladies</h2>
+            <a href="products.html?category=ladies">Explore the shop</a>
+        </div>
+        <div class="product-grid" data-products="ladies" data-limit="3"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="section-header">
+            <h2>Shop Republic is where timeless style<br>meets everyday wear.</h2>
+            <!-- TODO: replace with your own words about the shop. -->
+            <p>
+                Polos, Cuban shirts, linen shirts and crop tees, selected piece by piece.
+                Message us on WhatsApp for sizes, colours and prices, and we will sort you out.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="products.html">All</a></li>
+                    <li><a href="products.html?category=men">Men</a></li>
+                    <li><a href="products.html?category=ladies">Ladies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Men</h3>
+                <ul>
+                    <li><a href="products.html?category=men&amp;sub=striped-polo">Striped polos</a></li>
+                    <li><a href="products.html?category=men&amp;sub=short-sleeve">Short sleeve</a></li>
+                    <li><a href="products.html?category=men&amp;sub=zip-polo">Zip polos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <a href="index.html" class="footer-logo">
+                    <img src="img/logo/logo-light.png" alt="Shop Republic" width="640" height="478">
+                </a>
+                <div class="newsletter">
+                    <p>Menswear and ladieswear, selected piece by piece.<br>
+                       Message us on WhatsApp to order.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span data-year>2026</span> Shop Republic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- shop data: plain scripts so the site also works offline from disk -->
+    <script src="data/banners.js"></script>
+    <script src="data/products.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

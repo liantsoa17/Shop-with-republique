@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Shop Republic</title>
+<meta name="description" content="That page does not exist. Browse the Shop Republic collection instead.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap">
+<!--
+  Styles are inlined on purpose. GitHub Pages serves this file for ANY missing
+  path, including deep ones like /repo/a/b/typo, where a relative stylesheet
+  href would resolve to the wrong folder and the page would render unstyled.
+-->
+<style>
+  :root{--dark:#1a1a1a;--light:#fff;--gold:#d4af37;--gray:#666;--border:#e0e0e0}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--dark);background:var(--light);
+       line-height:1.6;min-height:100dvh;display:flex;flex-direction:column}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  header{background:var(--dark);color:var(--light);padding:18px 16px;text-align:center}
+  .logo{display:inline-block;line-height:0;text-decoration:none}
+  .logo img{height:42px;width:auto;max-width:180px;object-fit:contain}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:64px 16px}
+  .box{text-align:center;max-width:52ch}
+  .code{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(64px,18vw,112px);
+        line-height:1;color:var(--gold)}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,6vw,38px);
+     font-weight:400;margin:8px 0 12px;text-wrap:balance}
+  p{color:var(--gray);margin-bottom:32px}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;
+       padding:0 32px;background:var(--dark);color:var(--light);border:1px solid var(--dark);
+       font-size:12px;text-transform:uppercase;letter-spacing:2px;text-decoration:none;
+       transition:background .3s,color .3s}
+  .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--dark)}
+  .btn.ghost{background:transparent;color:var(--dark);border-color:var(--border)}
+  .btn.ghost:hover{background:var(--dark);color:var(--light);border-color:var(--dark)}
+  footer{background:var(--dark);color:rgba(255,255,255,.72);text-align:center;
+         padding:24px 16px;font-size:13px}
+  @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html" data-root="index.html">
+    <img src="img/logo/logo-light.png" data-root-src="img/logo/logo-light.png"
+         alt="Shop Republic" width="640" height="478">
+  </a>
+</header>
+
+<main>
+  <div class="box">
+    <p class="code" aria-hidden="true">404</p>
+    <h1>We cannot find that page</h1>
+    <p>The link may be out of date or mistyped. The whole collection is still here.</p>
+    <div class="actions">
+      <a class="btn" href="products.html" data-root="products.html">Browse all products</a>
+      <a class="btn ghost" href="index.html" data-root="index.html">Back to home</a>
+    </div>
+  </div>
+</main>
+
+<footer>&copy; <span id="y">2026</span> Shop Republic. All rights reserved.</footer>
+
+<script>
+/*
+  Rewrite the links to absolute site-root paths.
+
+  Why: this file is served for any missing URL, so a relative href like
+  "products.html" resolves against the *requested* folder, not the site root.
+  From /shop-republic/foo/bar it would wrongly point at /shop-republic/foo/products.html.
+
+  SITE_BASE = '' auto-detects a GitHub Pages PROJECT site (username.github.io/repo/).
+  If you publish to a USER site (username.github.io) or a custom domain where the
+  site sits at the domain root, set SITE_BASE = '/'.
+  If your repo name ever changes, this keeps working — nothing is hard-coded.
+*/
+(function () {
+  var SITE_BASE = '';
+
+  var base = SITE_BASE;
+  if (!base) {
+    if (/\.github\.io$/i.test(location.hostname)) {
+      var seg = location.pathname.split('/').filter(Boolean);
+      base = seg.length ? '/' + seg[0] + '/' : '/';
+    } else {
+      base = '/';
+    }
+  }
+
+  var links = document.querySelectorAll('[data-root]');
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute('href', base + links[i].getAttribute('data-root'));
+  }
+
+  // Same problem for the logo: a relative src would resolve against the
+  // requested folder, so point it at the site root too.
+  var imgs = document.querySelectorAll('[data-root-src]');
+  for (var j = 0; j < imgs.length; j++) {
+    imgs[j].setAttribute('src', base + imgs[j].getAttribute('data-root-src'));
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
